@@ -34,7 +34,7 @@ app.get('/weather', (req, res)=>{
     res.render('weather',{title: "Weather - page"})
 })
 app.get('*', (req, res)=>{
-    res.render('404', {title:"Error - page",errorMsg: 'Opps! Page Not Found'});
+    res.render('404', {title:"Error - page",errorMsg: 'Opps! Page Not Found, click here to go back 👍'});
 })
 
 
