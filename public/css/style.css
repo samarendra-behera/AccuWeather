@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400;8..30,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 0;
+}
+
+.main_menu {
+    background: var(--main-bg);
+}
+
+.navbar {
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.navbar li {
+    margin-left: 2rem;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar a:hover {
+    color: var(--main-color)
+}
+
+.navbar-toggler {
+    background-color: gray;
+}
+
+.fa-snowflake {
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* main header */
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+
+.main_header_left h1 {
+    font-size: 3rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_left h1 span {
+    color: var(--main-color)
+}
+
+.main_header_left button {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    box-shadow: 0 0.8rem 0.6rem -0.6rem #000;
+}
+
+.main_header_left button:hover {
+    box-shadow: 0 0.8rem 0.6rem -0.6rem var(--main-color);
+}
+
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main_header_right figure img {
+    height: 45rem;
+    filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.7));
+}
+
+/* weather page styling */
+/* temp input field style code */
+.temp_form {
+    width: 60%;
+    position: relative;
+    margin: 5rem auto;
+}
+
+.temp_form input[type="text"] {
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #1e202b;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder {
+    color: #bfc1c8;
+}
+
+.temp_form input[type='submit'] {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    border: none;
+    font-size: 1.6rem;
+    padding: 0 3rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: #0097e6;
+}
+
+.temp_form input[type='submit']:hover {
+    color: #0097e6;
+    background-color: white;
+}
+
+/* temp details style code */
+.temp_info {
+    width: 42rem;
+    margin: auto;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.top_layer {
+    background-color: #2d303d;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.top_layer p {
+    padding: 2rem;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 300;
+}
+
+.main_layer {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+#city_name {
+    font-size: 1.8rem;
+    font-weight: 200;
+    padding: 1rem 0 2rem;
+    color: white;
+}
+
+.middle_layer {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+.middle_layer p,
+.middle_layer fa {
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+.fa {
+    color: #009ad8;
+}
+
+sup {
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+
+/* 404 page styling */
+.errorimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.errorimg p {
+    font-size: 1.5rem;
+}
+
+.errorimg h1 {
+    font-size: 3.5rem;
+}
+
+img {
+    height: 35rem;
+}
+
+/* footer style */
+footer {
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+/* responsive code */
+@media (max-width: 768px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main_header_right {
+        height:auto;
+        margin-top: 3rem;
+    }
+
+    .temp_form {
+        width: auto;
+    }
+
+    .temp_info {
+        width: auto;
+    }
+
+    .middle_layer p,
+    .middle_layer fa{
+        font-size: 5rem;
+    }
+}
